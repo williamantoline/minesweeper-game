@@ -4,11 +4,261 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="vars.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Minesweeper Game</title>
   </head>
   <body>
-    <h1>Minesweeper Game</h1>
+    <div class="container">
+      <h1>Minesweeper Game</h1>
+
+      <div class="info-board">
+        <div class="info">
+          <div>
+            <img src="assets/img/ic_bomb.svg" alt="" />
+          </div>
+          <p>x <span id="bombLeft">20</span></p>
+        </div>
+        <div class="info">
+          <div>
+            <img src="assets/img/ic_time.svg" alt="" />
+          </div>
+          <p><span id="stopwatch">00:36</span></p>
+        </div>
+      </div>
+
+      <div class="page">
+        <div class="home-content" id="homeContent">
+          <button id="playButton">Play</button>
+        </div>
+        <div class="game-board" id="gameBoard">
+          <!-- <div class="row">
+            <div class="box isTwo">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box"><img src="assets/img/ic_flag.svg" alt="" /></div>
+            <div class="box"><img src="assets/img/ic_bomb.svg" alt="" /></div>
+          </div>
+          <div class="row">
+            <div class="box isTwo">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box"><img src="assets/img/ic_flag.svg" alt="" /></div>
+            <div class="box"><img src="assets/img/ic_bomb.svg" alt="" /></div>
+          </div>
+          <div class="row">
+            <div class="box isTwo">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box"><img src="assets/img/ic_flag.svg" alt="" /></div>
+            <div class="box"><img src="assets/img/ic_bomb.svg" alt="" /></div>
+          </div>
+          <div class="row">
+            <div class="box isTwo">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box"><img src="assets/img/ic_flag.svg" alt="" /></div>
+            <div class="box"><img src="assets/img/ic_bomb.svg" alt="" /></div>
+          </div>
+          <div class="row">
+            <div class="box isTwo">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box"><img src="assets/img/ic_flag.svg" alt="" /></div>
+            <div class="box"><img src="assets/img/ic_bomb.svg" alt="" /></div>
+          </div>
+          <div class="row">
+            <div class="box isTwo">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box"><img src="assets/img/ic_flag.svg" alt="" /></div>
+            <div class="box"><img src="assets/img/ic_bomb.svg" alt="" /></div>
+          </div>
+          <div class="row">
+            <div class="box isTwo">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box"><img src="assets/img/ic_flag.svg" alt="" /></div>
+            <div class="box"><img src="assets/img/ic_bomb.svg" alt="" /></div>
+          </div>
+          <div class="row">
+            <div class="box isTwo">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box"><img src="assets/img/ic_flag.svg" alt="" /></div>
+            <div class="box"><img src="assets/img/ic_bomb.svg" alt="" /></div>
+          </div>
+          <div class="row">
+            <div class="box isTwo">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box"><img src="assets/img/ic_flag.svg" alt="" /></div>
+            <div class="box"><img src="assets/img/ic_bomb.svg" alt="" /></div>
+          </div>
+          <div class="row">
+            <div class="box isTwo">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box"><img src="assets/img/ic_flag.svg" alt="" /></div>
+            <div class="box"><img src="assets/img/ic_bomb.svg" alt="" /></div>
+          </div>
+          <div class="row">
+            <div class="box isTwo">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box"><img src="assets/img/ic_flag.svg" alt="" /></div>
+            <div class="box"><img src="assets/img/ic_bomb.svg" alt="" /></div>
+          </div>
+          <div class="row">
+            <div class="box isTwo">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box"><img src="assets/img/ic_flag.svg" alt="" /></div>
+            <div class="box"><img src="assets/img/ic_bomb.svg" alt="" /></div>
+          </div>
+          <div class="row">
+            <div class="box isTwo">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box"><img src="assets/img/ic_flag.svg" alt="" /></div>
+            <div class="box"><img src="assets/img/ic_bomb.svg" alt="" /></div>
+          </div>
+          <div class="row">
+            <div class="box isTwo">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box">2</div>
+            <div class="box"><img src="assets/img/ic_flag.svg" alt="" /></div>
+            <div class="box"><img src="assets/img/ic_bomb.svg" alt="" /></div>
+          </div> -->
+        </div>
+      </div>
+    </div>
 
     <script src="index.js"></script>
   </body>
